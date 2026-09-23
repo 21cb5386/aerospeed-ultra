@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AeroSpeed Ultra | Gigabit Speed Test & Fiber Internet Speed Analysis</title>
+    <title>HeroSpeed | Gigabit Speed Test & Fiber Internet Speed Analysis</title>
     
     <!-- Meta Keywords & Description Target Foreign & High-Speed Internet Users -->
-    <meta name="keywords" content="speed test, internet speed test, gigabit speed test, fiber speed test, wifi 6 speed test, low latency ping, download speed, upload speed, 5g speed test, broadband benchmark, اختبار سرعة النت, قياس سرعة الالياف البصرية">
-    <meta name="description" content="Accurate Gigabit & Fiber Internet Speed Test. Benchmark your Download, Upload, Ping, and Jitter on global edge servers.">
+    <meta name="keywords" content="speed test, internet speed test, gigabit speed test, fiber speed test, wifi 6 speed test, low latency ping, download speed, upload speed, 5g speed test, herospeed, اختبار سرعة النت, قياس سرعة الالياف البصرية">
+    <meta name="description" content="Accurate Gigabit & Fiber Internet Speed Test with HeroSpeed. Benchmark your Download, Upload, Ping, and Jitter on global edge servers.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -547,7 +547,7 @@
             <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
             </svg>
-            <h1 class="brand-name">AeroSpeed Ultra</h1>
+            <h1 class="brand-name">HeroSpeed</h1>
         </div>
     </header>
 
@@ -560,7 +560,7 @@
             </div>
             <h2 class="hero-title">
                 <span data-i18n="heroTitleStart">Test Your Internet Speed with</span> 
-                <span class="brand-highlight">AeroSpeed Ultra</span>
+                <span class="brand-highlight">HeroSpeed</span>
             </h2>
             <p class="hero-subtitle" data-i18n="heroSub">
                 Accurate, real-time measurements for Download, Upload, Ping, and Latency over Fiber & 5G Edge Networks.
@@ -1139,15 +1139,15 @@
         }
 
         function saveHistory(result) {
-            let history = JSON.parse(localStorage.getItem('aerospeed_history') || '[]');
+            let history = JSON.parse(localStorage.getItem('herospeed_history') || '[]');
             history.unshift(result);
             if (history.length > 5) history.pop();
-            localStorage.setItem('aerospeed_history', JSON.stringify(history));
+            localStorage.setItem('herospeed_history', JSON.stringify(history));
             renderHistory();
         }
 
         function renderHistory() {
-            let history = JSON.parse(localStorage.getItem('aerospeed_history') || '[]');
+            let history = JSON.parse(localStorage.getItem('herospeed_history') || '[]');
             els.historyBody.innerHTML = '';
             history.forEach(item => {
                 const tr = document.createElement('tr');
@@ -1162,13 +1162,13 @@
         }
 
         els.clearHistoryBtn.addEventListener('click', () => {
-            localStorage.removeItem('aerospeed_history');
+            localStorage.removeItem('herospeed_history');
             renderHistory();
         });
         renderHistory();
 
         els.shareBtn.addEventListener('click', () => {
-            const summary = `🚀 AeroSpeed Ultra Test Results:\nDownload: ${els.dlVal.textContent} Mbps\nUpload: ${els.ulVal.textContent} Mbps\nPing: ${els.pingVal.textContent} ms\nISP: ${els.isp.textContent}`;
+            const summary = `🚀 HeroSpeed Test Results:\nDownload: ${els.dlVal.textContent} Mbps\nUpload: ${els.ulVal.textContent} Mbps\nPing: ${els.pingVal.textContent} ms\nISP: ${els.isp.textContent}`;
             navigator.clipboard.writeText(summary);
             alert(translations[currentLang].copied);
         });
