@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AeroSpeed Ultra | قياس سرعة الإنترنت</title>
+    <title>AeroSpeed Ultra | Gigabit Speed Test & Fiber Internet Speed Analysis</title>
+    
+    <!-- Meta Keywords & Description Target Foreign & High-Speed Internet Users -->
+    <meta name="keywords" content="speed test, internet speed test, gigabit speed test, fiber speed test, wifi 6 speed test, low latency ping, download speed, upload speed, 5g speed test, broadband benchmark, اختبار سرعة النت, قياس سرعة الالياف البصرية">
+    <meta name="description" content="Accurate Gigabit & Fiber Internet Speed Test. Benchmark your Download, Upload, Ping, and Jitter on global edge servers.">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
@@ -42,13 +47,14 @@
                 radial-gradient(circle at 50% 0%, rgba(0, 242, 254, 0.12) 0%, transparent 50%),
                 radial-gradient(circle at 85% 85%, rgba(181, 55, 242, 0.08) 0%, transparent 40%);
             color: var(--text-main);
-            font-family: var(--font-ar);
+            font-family: var(--font-en);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             overflow-x: hidden;
         }
 
+        html[dir="rtl"] body { font-family: var(--font-ar); }
         html[dir="ltr"] body { font-family: var(--font-en); }
 
         /* Floating Sticky Language Switcher Button */
@@ -534,7 +540,7 @@
 <body>
 
     <!-- Sticky Language Switcher Button -->
-    <button id="lang-toggle" class="lang-toggle-sticky">English</button>
+    <button id="lang-toggle" class="lang-toggle-sticky">العربية</button>
 
     <header class="top-bar">
         <div class="brand">
@@ -550,19 +556,19 @@
         <section class="hero-section">
             <div class="hero-badge">
                 <span class="pulse-dot"></span>
-                <span data-i18n="heroBadge">قياس دقيق ومتطور بنسبة 100%</span>
+                <span data-i18n="heroBadge">Gigabit & Fiber Speed Benchmark</span>
             </div>
             <h2 class="hero-title">
-                <span data-i18n="heroTitleStart">قِس سرعة اتصالاتك الحقيقية مع</span> 
+                <span data-i18n="heroTitleStart">Test Your Internet Speed with</span> 
                 <span class="brand-highlight">AeroSpeed Ultra</span>
             </h2>
             <p class="hero-subtitle" data-i18n="heroSub">
-                تحليل مباشر ودقيق لسرعات التنزيل، الرفع، وزمن الاستجابة (Ping) عبر خوارزميات ذكية وبدون أي تداخل.
+                Accurate, real-time measurements for Download, Upload, Ping, and Latency over Fiber & 5G Edge Networks.
             </p>
             <div class="hero-features">
-                <div class="feature-tag">⚡ <span data-i18n="feat1">تحليل حي ومباشر</span></div>
-                <div class="feature-tag">🌐 <span data-i18n="feat2">خوادم عالمية فائقة</span></div>
-                <div class="feature-tag">🎯 <span data-i18n="feat3">قياس واقعي وبدون تداخل</span></div>
+                <div class="feature-tag">⚡ <span data-i18n="feat1">Real-Time Gigabit Analytics</span></div>
+                <div class="feature-tag">🌐 <span data-i18n="feat2">Global Fiber & 5G Edge Servers</span></div>
+                <div class="feature-tag">🎯 <span data-i18n="feat3">Ultra Low-Latency Precision</span></div>
             </div>
         </section>
 
@@ -570,26 +576,26 @@
             <div class="total-progress-container">
                 <div id="progress-fill" class="total-progress-fill"></div>
             </div>
-            <div id="status-badge" class="status-badge" data-i18n="readyNotice">اضغط "ابدأ" لبدء الفحص</div>
+            <div id="status-badge" class="status-badge" data-i18n="readyNotice">Click GO to start your speed test</div>
         </div>
 
         <section class="results-panel">
             <div class="metric-card download">
-                <div class="metric-label" data-i18n="download">التنزيل</div>
+                <div class="metric-label" data-i18n="download">Download Speed</div>
                 <div class="metric-value-container">
                     <span id="dl-val" class="metric-value">--</span>
                     <span class="metric-unit">Mbps</span>
                 </div>
             </div>
             <div class="metric-card upload">
-                <div class="metric-label" data-i18n="upload">الرفع</div>
+                <div class="metric-label" data-i18n="upload">Upload Speed</div>
                 <div class="metric-value-container">
                     <span id="ul-val" class="metric-value">--</span>
                     <span class="metric-unit">Mbps</span>
                 </div>
             </div>
             <div class="metric-card ping">
-                <div class="metric-label" data-i18n="ping">البنج</div>
+                <div class="metric-label" data-i18n="ping">Ping (Latency)</div>
                 <div class="metric-value-container">
                     <span id="ping-val" class="metric-value">--</span>
                     <span class="metric-unit">ms</span>
@@ -610,7 +616,7 @@
 
                     <div class="gauge-center">
                         <button id="action-btn" class="action-btn">
-                            <span class="btn-text" data-i18n="go">ابدأ</span>
+                            <span class="btn-text" data-i18n="go">GO</span>
                         </button>
                         <div id="live-metrics" class="live-metrics hidden">
                             <div id="live-type" class="live-type">--</div>
@@ -622,42 +628,42 @@
 
                 <div class="network-info-card">
                     <div class="info-row">
-                        <span data-i18n="ip">عنوان IP:</span>
-                        <span id="info-ip" class="val" data-i18n="pressStart">اضغط ابدأ</span>
+                        <span data-i18n="ip">Your Public IP:</span>
+                        <span id="info-ip" class="val" data-i18n="pressStart">Click GO</span>
                     </div>
                     <div class="info-row">
-                        <span data-i18n="isp">مزود الخدمة:</span>
-                        <span id="info-isp" class="val" data-i18n="pressStart">اضغط ابدأ</span>
+                        <span data-i18n="isp">Provider (ISP):</span>
+                        <span id="info-isp" class="val" data-i18n="pressStart">Click GO</span>
                     </div>
                     <div class="info-row">
-                        <span data-i18n="location">الموقع:</span>
-                        <span id="info-loc" class="val" data-i18n="pressStart">اضغط ابدأ</span>
+                        <span data-i18n="location">Server Location:</span>
+                        <span id="info-loc" class="val" data-i18n="pressStart">Click GO</span>
                     </div>
                 </div>
             </div>
 
             <div class="chart-section">
-                <div class="chart-title" data-i18n="chartTitle">الرسم البياني المباشر للسرعة</div>
+                <div class="chart-title" data-i18n="chartTitle">Real-Time Bandwidth Chart</div>
                 <canvas id="speedChart"></canvas>
             </div>
         </section>
 
         <div class="actions-bar">
-            <button id="share-btn" class="lang-toggle-sticky hidden" style="position:static;" data-i18n="share">مشاركة النتيجة 📋</button>
+            <button id="share-btn" class="lang-toggle-sticky hidden" style="position:static;" data-i18n="share">Share Result 📋</button>
         </div>
 
         <section class="history-section">
             <div class="history-header">
-                <h3 data-i18n="historyTitle">سجل الاختبارات السابقة</h3>
-                <button id="clear-history" class="lang-toggle-sticky" style="position:static; padding:0.3rem 0.8rem; font-size:0.8rem;" data-i18n="clear">مسح</button>
+                <h3 data-i18n="historyTitle">Speed Test History</h3>
+                <button id="clear-history" class="lang-toggle-sticky" style="position:static; padding:0.3rem 0.8rem; font-size:0.8rem;" data-i18n="clear">Clear History</button>
             </div>
             <table class="history-table">
                 <thead>
                     <tr>
-                        <th data-i18n="date">التاريخ</th>
-                        <th data-i18n="download">التنزيل</th>
-                        <th data-i18n="upload">الرفع</th>
-                        <th data-i18n="ping">البنج</th>
+                        <th data-i18n="date">Date</th>
+                        <th data-i18n="download">Download Speed</th>
+                        <th data-i18n="upload">Upload Speed</th>
+                        <th data-i18n="ping">Ping (Latency)</th>
                     </tr>
                 </thead>
                 <tbody id="history-body"></tbody>
@@ -668,51 +674,51 @@
 
     <script>
         const translations = {
-            ar: {
-                dir: 'rtl',
-                heroBadge: 'قياس دقيق ومتطور بنسبة 100%',
-                heroTitleStart: 'قِس سرعة اتصالاتك الحقيقية مع',
-                heroSub: 'تحليل مباشر ودقيق لسرعات التنزيل، الرفع، وزمن الاستجابة (Ping) عبر خوارزميات ذكية وبدون أي تداخل.',
-                feat1: 'تحليل حي ومباشر',
-                feat2: 'خوادم عالمية فائقة',
-                feat3: 'قياس واقعي وبدون تداخل',
-                ip: 'عنوان IP:', isp: 'مزود الخدمة:', location: 'الموقع:',
-                pressStart: 'اضغط ابدأ',
-                ping: 'البنج', download: 'التنزيل', upload: 'الرفع',
-                go: 'ابدأ', again: 'إعادة', chartTitle: 'الرسم البياني المباشر للسرعة',
-                share: 'مشاركة النتيجة 📋', historyTitle: 'سجل الاختبارات السابقة', clear: 'مسح',
-                date: 'التاريخ', copied: 'تم نسخ النتيجة إلى الحافظة!',
-                fetchingIp: '🌐 جاري الاتصال وتحليل مسار الشبكة...',
-                testingDl: '⬇️ جاري قياس سرعة التنزيل...',
-                testingUl: '⬆️ جاري قياس سرعة الرفع...',
-                calculatingPing: '⚡ جاري قياس زمن الاستجابة (Ping)...',
-                readyNotice: 'اضغط "ابدأ" لبدء الفحص',
-                doneNotice: 'اكتمل الفحص بنجاح!'
-            },
             en: {
                 dir: 'ltr',
-                heroBadge: 'Ultra Precision Speed Analysis',
-                heroTitleStart: 'Test Your Real Speed with',
-                heroSub: 'Experience ultra-precise, real-time measurements for Download, Upload, and Ping without interference or fake statistics.',
-                feat1: 'Real-Time Analytics',
-                feat2: 'Global Edge Servers',
-                feat3: 'Zero Interference Guarantee',
-                ip: 'IP Address:', isp: 'Provider:', location: 'Location:',
+                heroBadge: 'Gigabit & Fiber Speed Benchmark',
+                heroTitleStart: 'Test Your Internet Speed with',
+                heroSub: 'Accurate, real-time measurements for Download, Upload, Ping, and Latency over Fiber & 5G Edge Networks.',
+                feat1: 'Real-Time Gigabit Analytics',
+                feat2: 'Global Fiber & 5G Edge Servers',
+                feat3: 'Ultra Low-Latency Precision',
+                ip: 'Your Public IP:', isp: 'Provider (ISP):', location: 'Server Location:',
                 pressStart: 'Click GO',
-                ping: 'Ping', download: 'Download', upload: 'Upload',
-                go: 'GO', again: 'AGAIN', chartTitle: 'Real-Time Speed Graph',
-                share: 'Share Result 📋', historyTitle: 'Test History', clear: 'Clear',
-                date: 'Date', copied: 'Results copied to clipboard!',
-                fetchingIp: '🌐 Connecting & analyzing server route...',
-                testingDl: '⬇️ Testing Download Speed...',
-                testingUl: '⬆️ Testing Upload Speed...',
-                calculatingPing: '⚡ Measuring Latency & Ping...',
-                readyNotice: 'Click GO to start test',
-                doneNotice: 'Test Completed Successfully!'
+                ping: 'Ping (Latency)', download: 'Download Speed', upload: 'Upload Speed',
+                go: 'GO', again: 'TEST AGAIN', chartTitle: 'Real-Time Bandwidth Chart',
+                share: 'Share Result 📋', historyTitle: 'Speed Test History', clear: 'Clear History',
+                date: 'Date', copied: 'Speed test results copied to clipboard!',
+                fetchingIp: '🌐 Analyzing connection & route to edge server...',
+                testingDl: '⬇️ Measuring Gigabit Download Speed...',
+                testingUl: '⬆️ Measuring Gigabit Upload Speed...',
+                calculatingPing: '⚡ Benchmarking Latency & Ping...',
+                readyNotice: 'Click GO to start your speed test',
+                doneNotice: 'Internet Speed Test Completed!'
+            },
+            ar: {
+                dir: 'rtl',
+                heroBadge: 'اختبار سرعة الألياف والجيجابت الفائق',
+                heroTitleStart: 'اختبار سرعة الإنترنت الحقيقي مع',
+                heroSub: 'تحليل فائق الدقة لسرعات التنزيل، الرفع، والـ Ping عبر ألياف الجيجابت وشبكات 5G مع خوادم عالمية منخفضة التأخير.',
+                feat1: 'تحليل الجيجابت الحي (Gigabit Real-Time)',
+                feat2: 'خوادم الألياف والـ 5G العالمية',
+                feat3: 'دقة البنج والزمن المنخفض (Low Latency)',
+                ip: 'عنوان IP الخاص بك:', isp: 'مزود الخدمة (ISP):', location: 'السيرفر والموقع:',
+                pressStart: 'اضغط ابدأ',
+                ping: 'البنج (Latency)', download: 'التنزيل (Download)', upload: 'الرفع (Upload)',
+                go: 'ابدأ', again: 'إعادة', chartTitle: 'الرسم البياني المباشر للنطاق الترددي (Bandwidth Chart)',
+                share: 'مشاركة النتيجة 📋', historyTitle: 'سجل اختبارات السرعة النظير للأنترنت', clear: 'مسح السجل',
+                date: 'التاريخ', copied: 'تم نسخ النتيجة إلى الحافظة!',
+                fetchingIp: '🌐 جاري فحص مسار الشبكة والسيرفرات...',
+                testingDl: '⬇️ جاري قياس أقصى سرعة تنزيل (Gigabit Download)...',
+                testingUl: '⬆️ جاري قياس أقصى سرعة رفع (Gigabit Upload)...',
+                calculatingPing: '⚡ قياس زمن الاستجابة والـ Ping المنخفض...',
+                readyNotice: 'اضغط "ابدأ" لبدء اختبار السرعة الفائق',
+                doneNotice: 'اكتمل اختبار السرعة بنجاح!'
             }
         };
 
-        let currentLang = 'ar'; 
+        let currentLang = 'en'; 
         const STATE = { IDLE: 0, RUNNING: 1, DONE: 2 };
         let currentState = STATE.IDLE;
 
@@ -771,7 +777,7 @@
             els.html.setAttribute('dir', t.dir);
             els.html.setAttribute('lang', lang);
             
-            els.langToggle.textContent = lang === 'ar' ? 'English' : 'العربية';
+            els.langToggle.textContent = lang === 'en' ? 'العربية' : 'English';
 
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
@@ -786,10 +792,9 @@
         }
 
         els.langToggle.addEventListener('click', () => {
-            setLanguage(currentLang === 'ar' ? 'en' : 'ar');
+            setLanguage(currentLang === 'en' ? 'ar' : 'en');
         });
 
-        // خوارزمية الفيزياء للانتقال السلس والمرن للعقرب والعداد
         function startGaugePhysics() {
             if (isAnimationActive) return;
             isAnimationActive = true;
@@ -797,7 +802,6 @@
             function animate() {
                 if (!isAnimationActive) return;
 
-                // معادلة الحركة الانسيابية اللطيفة (Deceleration Lerp)
                 currentGaugeSpeed += (targetSpeed - currentGaugeSpeed) * 0.085;
 
                 const maxScale = 120;
@@ -1080,58 +1084,36 @@
 
             startGaugePhysics();
 
-            // 1. Fetch IP & ISP
             els.statusBadge.textContent = translations[currentLang].fetchingIp;
             await fetchNetworkInfo();
             await sleep(600);
 
-            // -------------------------------------------------------------
-            // 2. Download Phase (قياس التنزيل)
-            // -------------------------------------------------------------
             els.statusBadge.textContent = translations[currentLang].testingDl;
             activeColorVar = '--neon-dl';
             const dlRes = await runDownloadPhase();
             const dlValNum = parseFloat(dlRes) || 0;
             
-            // أ) عرض النتيجة المسجلة في كرت التنزيل
             els.dlVal.textContent = dlRes;
-            
-            // ب) الثبات الانسيابي عند النتيجة النهائية لمدة ثانيتين (2 ثانية)
             targetSpeed = dlValNum;
             await sleep(2000); 
 
-            // ج) الهبوط الانسيابي والهادئ إلى الصفر (Smooth Glide)
             targetSpeed = 0;
             await sleep(800); 
-
-            // د) التوقف والراحة عند الصفر لمدة ثانيتين (2 ثانية)
             await sleep(2000); 
 
-            // -------------------------------------------------------------
-            // 3. Upload Phase (قياس الرفع)
-            // -------------------------------------------------------------
             els.statusBadge.textContent = translations[currentLang].testingUl;
             activeColorVar = '--neon-ul';
             const ulRes = await runUploadPhase();
             const ulValNum = parseFloat(ulRes) || 0;
             
-            // أ) عرض النتيجة المسجلة في كرت الرفع
             els.ulVal.textContent = ulRes;
-            
-            // ب) الثبات الانسيابي عند النتيجة النهائية لمدة ثانيتين (2 ثانية)
             targetSpeed = ulValNum;
             await sleep(2000); 
 
-            // ج) الهبوط الانسيابي والهادئ إلى الصفر (Smooth Glide)
             targetSpeed = 0;
             await sleep(800); 
-
-            // د) التوقف والراحة عند الصفر لمدة ثانيتين (2 ثانية)
             await sleep(2000); 
 
-            // -------------------------------------------------------------
-            // 4. Ping Phase (قياس البنج)
-            // -------------------------------------------------------------
             els.statusBadge.textContent = translations[currentLang].calculatingPing;
             activeColorVar = '--neon-ping';
             const pingRes = await runPingPhase();
@@ -1186,7 +1168,7 @@
         renderHistory();
 
         els.shareBtn.addEventListener('click', () => {
-            const summary = `🚀 نتائج قياس AeroSpeed Ultra:\nالتنزيل: ${els.dlVal.textContent} Mbps\nالرفع: ${els.ulVal.textContent} Mbps\nالبنج: ${els.pingVal.textContent} ms\nمزود الخدمة: ${els.isp.textContent}`;
+            const summary = `🚀 AeroSpeed Ultra Test Results:\nDownload: ${els.dlVal.textContent} Mbps\nUpload: ${els.ulVal.textContent} Mbps\nPing: ${els.pingVal.textContent} ms\nISP: ${els.isp.textContent}`;
             navigator.clipboard.writeText(summary);
             alert(translations[currentLang].copied);
         });
