@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HeroSpeed | Gigabit Speed Test & Fiber Internet Speed Analysis</title>
+    <title>Hero Speed | Gigabit Internet Speed Test & App</title>
     
-    <!-- Meta Keywords & Description Target Foreign & High-Speed Internet Users -->
-    <meta name="keywords" content="speed test, internet speed test, gigabit speed test, fiber speed test, wifi 6 speed test, low latency ping, download speed, upload speed, 5g speed test, herospeed, اختبار سرعة النت, قياس سرعة الالياف البصرية">
-    <meta name="description" content="Accurate Gigabit & Fiber Internet Speed Test with HeroSpeed. Benchmark your Download, Upload, Ping, and Jitter on global edge servers.">
+    <meta name="keywords" content="Hero Speed, speed test, gigabit speed test, اختبار سرعة النت, تطبيق هيرو سبيد">
+    <meta name="description" content="Hero Speed - Gigabit & fiber optic high-speed internet testing platform and professional diagnostic app.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,19 +15,19 @@
     <style>
         :root {
             --bg-dark: #060911;
-            --bg-card: rgba(18, 26, 43, 0.75);
-            --border-glow: rgba(0, 242, 254, 0.2);
-            --border-color: rgba(255, 255, 255, 0.08);
+            --bg-card: rgba(18, 26, 43, 0.85);
+            --border-glow: rgba(0, 242, 254, 0.3);
+            --border-color: rgba(255, 255, 255, 0.1);
             
             --text-main: #ffffff;
             --text-sub: #94a3b8;
             
-            --neon-dl: #00f2fe;  /* Download Neon */
-            --neon-ul: #b537f2;  /* Upload Neon */
-            --neon-ping: #ffb703; /* Ping Neon */
+            --neon-dl: #00f2fe;  
+            --neon-ul: #b537f2;  
+            --neon-ping: #ffb703; 
             
             --gauge-track: #151d2a;
-            --radius-lg: 20px;
+            --radius-lg: 24px;
             --radius-full: 999px;
             
             --font-en: 'Inter', sans-serif;
@@ -44,8 +43,8 @@
         body {
             background: var(--bg-dark);
             background-image: 
-                radial-gradient(circle at 50% 0%, rgba(0, 242, 254, 0.12) 0%, transparent 50%),
-                radial-gradient(circle at 85% 85%, rgba(181, 55, 242, 0.08) 0%, transparent 40%);
+                radial-gradient(circle at 50% 0%, rgba(0, 242, 254, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 85%, rgba(181, 55, 242, 0.1) 0%, transparent 40%);
             color: var(--text-main);
             font-family: var(--font-en);
             min-height: 100vh;
@@ -100,19 +99,143 @@
         }
 
         .brand-icon {
-            width: 36px;
-            height: 36px;
+            width: 38px;
+            height: 38px;
             color: var(--neon-dl);
-            filter: drop-shadow(0 0 8px var(--neon-dl));
+            filter: drop-shadow(0 0 10px var(--neon-dl));
         }
 
         .brand-name {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 900;
             letter-spacing: -0.5px;
             background: linear-gradient(135deg, #ffffff 0%, var(--neon-dl) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        /* تصميم جذاب ومذهل لقسم تحميل التطبيق */
+        .app-download-banner {
+            width: 100%;
+            background: linear-gradient(135deg, rgba(20, 30, 55, 0.95) 0%, rgba(10, 16, 30, 0.98) 100%);
+            border: 1.5px solid rgba(0, 242, 254, 0.4);
+            border-radius: var(--radius-lg);
+            padding: 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            box-shadow: 0 15px 40px rgba(0, 242, 254, 0.15), inset 0 0 20px rgba(0, 242, 254, 0.05);
+            margin-top: 1rem;
+            backdrop-filter: blur(20px);
+            position: relative;
+            overflow: hidden;
+            animation: borderGlow 4s infinite alternate;
+        }
+
+        @keyframes borderGlow {
+            0% { border-color: rgba(0, 242, 254, 0.3); box-shadow: 0 15px 40px rgba(0, 242, 254, 0.12); }
+            100% { border-color: rgba(181, 55, 242, 0.5); box-shadow: 0 15px 40px rgba(181, 55, 242, 0.2); }
+        }
+
+        .app-download-banner::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 6px; height: 100%;
+            background: linear-gradient(to bottom, var(--neon-dl), var(--neon-ul));
+            box-shadow: 0 0 15px var(--neon-dl);
+        }
+
+        .banner-info {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+
+        .banner-icon-box {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, rgba(0, 242, 254, 0.15), rgba(181, 55, 242, 0.15));
+            border: 1px solid rgba(0, 242, 254, 0.4);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.25);
+            animation: iconFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes iconFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .banner-text h3 {
+            font-size: 1.25rem;
+            font-weight: 900;
+            color: #ffffff;
+            margin-bottom: 0.3rem;
+            text-shadow: 0 0 10px rgba(255,255,255,0.2);
+        }
+
+        .banner-text p {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+        }
+
+        .banner-btn {
+            background: linear-gradient(135deg, var(--neon-dl) 0%, #0099ff 100%);
+            color: var(--bg-dark);
+            padding: 0.9rem 2.2rem;
+            border-radius: var(--radius-full);
+            font-weight: 900;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            box-shadow: 0 0 25px rgba(0, 242, 254, 0.5);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            white-space: nowrap;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%; width: 200%; height: 200%;
+            background: linear-gradient(60deg, transparent, rgba(255,255,255,0.3), transparent);
+            transform: rotate(45deg) translateX(-100%);
+            transition: transform 0.7s ease;
+        }
+
+        .banner-btn:hover::after {
+            transform: rotate(45deg) translateX(100%);
+        }
+
+        .banner-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 0 35px rgba(0, 242, 254, 0.8), 0 0 15px rgba(181, 55, 242, 0.5);
+            background: linear-gradient(135deg, #ffffff 0%, var(--neon-dl) 100%);
+        }
+
+        @media (max-width: 768px) {
+            .app-download-banner {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+                padding: 1.5rem 1rem;
+            }
+            .banner-info {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            .banner-btn {
+                width: 100%;
+                justify-content: center;
+            }
         }
 
         .app-container {
@@ -540,14 +663,14 @@
 <body>
 
     <!-- Sticky Language Switcher Button -->
-    <button id="lang-toggle" class="lang-toggle-sticky">العربية</button>
+    <button id="lang-toggle" class="lang-toggle-sticky">عربي</button>
 
     <header class="top-bar">
         <div class="brand">
             <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
             </svg>
-            <h1 class="brand-name">HeroSpeed</h1>
+            <h1 class="brand-name">Hero Speed</h1>
         </div>
     </header>
 
@@ -560,11 +683,26 @@
             </div>
             <h2 class="hero-title">
                 <span data-i18n="heroTitleStart">Test Your Internet Speed with</span> 
-                <span class="brand-highlight">HeroSpeed</span>
+                <span class="brand-highlight">Hero Speed</span>
             </h2>
             <p class="hero-subtitle" data-i18n="heroSub">
                 Accurate, real-time measurements for Download, Upload, Ping, and Latency over Fiber & 5G Edge Networks.
             </p>
+
+            <!-- قسم تحميل التطبيق -->
+            <div class="app-download-banner">
+                <div class="banner-info">
+                    <div class="banner-icon-box">⚡</div>
+                    <div class="banner-text">
+                        <h3 data-i18n="appBannerTitle">Hero Speed Android App</h3>
+                        <p data-i18n="appBannerDesc">Download our official network testing app for free right now</p>
+                    </div>
+                </div>
+                <a href="https://www.mediafire.com/file/ofylzyv8m138qv6/app-release.apk/file" target="_blank" class="banner-btn">
+                    📥 <span data-i18n="appBannerBtn">Download App (APK)</span>
+                </a>
+            </div>
+
             <div class="hero-features">
                 <div class="feature-tag">⚡ <span data-i18n="feat1">Real-Time Gigabit Analytics</span></div>
                 <div class="feature-tag">🌐 <span data-i18n="feat2">Global Fiber & 5G Edge Servers</span></div>
@@ -572,37 +710,7 @@
             </div>
         </section>
 
-        <div>
-            <div class="total-progress-container">
-                <div id="progress-fill" class="total-progress-fill"></div>
-            </div>
-            <div id="status-badge" class="status-badge" data-i18n="readyNotice">Click GO to start your speed test</div>
-        </div>
-
-        <section class="results-panel">
-            <div class="metric-card download">
-                <div class="metric-label" data-i18n="download">Download Speed</div>
-                <div class="metric-value-container">
-                    <span id="dl-val" class="metric-value">--</span>
-                    <span class="metric-unit">Mbps</span>
-                </div>
-            </div>
-            <div class="metric-card upload">
-                <div class="metric-label" data-i18n="upload">Upload Speed</div>
-                <div class="metric-value-container">
-                    <span id="ul-val" class="metric-value">--</span>
-                    <span class="metric-unit">Mbps</span>
-                </div>
-            </div>
-            <div class="metric-card ping">
-                <div class="metric-label" data-i18n="ping">Ping (Latency)</div>
-                <div class="metric-value-container">
-                    <span id="ping-val" class="metric-value">--</span>
-                    <span class="metric-unit">ms</span>
-                </div>
-            </div>
-        </section>
-
+        <!-- عداد القياس وزر ابدأ في المقدمة -->
         <section class="main-display">
             <div class="gauge-column">
                 <div class="gauge-container">
@@ -648,6 +756,38 @@
             </div>
         </section>
 
+        <div>
+            <div class="total-progress-container">
+                <div id="progress-fill" class="total-progress-fill"></div>
+            </div>
+            <div id="status-badge" class="status-badge" data-i18n="readyNotice">Click GO to start your speed test</div>
+        </div>
+
+        <!-- بطاقات نتائج القياس -->
+        <section class="results-panel">
+            <div class="metric-card download">
+                <div class="metric-label" data-i18n="download">Download Speed</div>
+                <div class="metric-value-container">
+                    <span id="dl-val" class="metric-value">--</span>
+                    <span class="metric-unit">Mbps</span>
+                </div>
+            </div>
+            <div class="metric-card upload">
+                <div class="metric-label" data-i18n="upload">Upload Speed</div>
+                <div class="metric-value-container">
+                    <span id="ul-val" class="metric-value">--</span>
+                    <span class="metric-unit">Mbps</span>
+                </div>
+            </div>
+            <div class="metric-card ping">
+                <div class="metric-label" data-i18n="ping">Ping (Latency)</div>
+                <div class="metric-value-container">
+                    <span id="ping-val" class="metric-value">--</span>
+                    <span class="metric-unit">ms</span>
+                </div>
+            </div>
+        </section>
+
         <div class="actions-bar">
             <button id="share-btn" class="lang-toggle-sticky hidden" style="position:static;" data-i18n="share">Share Result 📋</button>
         </div>
@@ -674,11 +814,38 @@
 
     <script>
         const translations = {
+            ar: {
+                dir: 'rtl',
+                heroBadge: 'اختبار سرعة الألياف والجيجابت الفائق',
+                heroTitleStart: 'اختبر سرعة الإنترنت الحقيقي مع تطبيق',
+                heroSub: 'تحليل فائق الدقة لسرعات التنزيل، الرفع، والـ Ping عبر ألياف الجيجابت وشبكات 5G مع خوادم عالمية منخفضة التأخير.',
+                appBannerTitle: 'تطبيق Hero Speed للأندرويد',
+                appBannerDesc: 'قم بتنزيل التطبيق الرسمي لفحص سرعة الشبكة على هاتفك الآن مجاناً',
+                appBannerBtn: 'تحميل التطبيق (APK)',
+                feat1: 'تحليل الجيجابت الحي (Gigabit Real-Time)',
+                feat2: 'خوادم الألياف والـ 5G العالمية',
+                feat3: 'دقة البنج والزمن المنخفض (Low Latency)',
+                ip: 'عنوان IP الخاص بك:', isp: 'مزود الخدمة (ISP):', location: 'السيرفر والموقع:',
+                pressStart: 'اضغط ابدأ',
+                ping: 'البنج (Latency)', download: 'التنزيل (Download)', upload: 'الرفع (Upload)',
+                go: 'ابدأ', again: 'إعادة', chartTitle: 'الرسم البياني المباشر للنطاق الترددي (Bandwidth Chart)',
+                share: 'مشاركة النتيجة 📋', historyTitle: 'سجل اختبارات السرعة لشبكة الإنترنت', clear: 'مسح السجل',
+                date: 'التاريخ', copied: 'تم نسخ النتيجة إلى الحافظة!',
+                fetchingIp: '🌐 جاري فحص مسار الشبكة والسيرفرات...',
+                testingDl: '⬇️ جاري قياس أقصى سرعة تنزيل (Gigabit Download)...',
+                testingUl: '⬆️ جاري قياس أقصى سرعة رفع (Gigabit Upload)...',
+                calculatingPing: '⚡ قياس زمن الاستجابة والـ Ping المنخفض...',
+                readyNotice: 'اضغط "ابدأ" لبدء اختبار السرعة الفائق',
+                doneNotice: 'اكتمل اختبار السرعة بنجاح!'
+            },
             en: {
                 dir: 'ltr',
                 heroBadge: 'Gigabit & Fiber Speed Benchmark',
                 heroTitleStart: 'Test Your Internet Speed with',
                 heroSub: 'Accurate, real-time measurements for Download, Upload, Ping, and Latency over Fiber & 5G Edge Networks.',
+                appBannerTitle: 'Hero Speed Android App',
+                appBannerDesc: 'Download our official network testing app for free right now',
+                appBannerBtn: 'Download App (APK)',
                 feat1: 'Real-Time Gigabit Analytics',
                 feat2: 'Global Fiber & 5G Edge Servers',
                 feat3: 'Ultra Low-Latency Precision',
@@ -694,27 +861,6 @@
                 calculatingPing: '⚡ Benchmarking Latency & Ping...',
                 readyNotice: 'Click GO to start your speed test',
                 doneNotice: 'Internet Speed Test Completed!'
-            },
-            ar: {
-                dir: 'rtl',
-                heroBadge: 'اختبار سرعة الألياف والجيجابت الفائق',
-                heroTitleStart: 'اختبار سرعة الإنترنت الحقيقي مع',
-                heroSub: 'تحليل فائق الدقة لسرعات التنزيل، الرفع، والـ Ping عبر ألياف الجيجابت وشبكات 5G مع خوادم عالمية منخفضة التأخير.',
-                feat1: 'تحليل الجيجابت الحي (Gigabit Real-Time)',
-                feat2: 'خوادم الألياف والـ 5G العالمية',
-                feat3: 'دقة البنج والزمن المنخفض (Low Latency)',
-                ip: 'عنوان IP الخاص بك:', isp: 'مزود الخدمة (ISP):', location: 'السيرفر والموقع:',
-                pressStart: 'اضغط ابدأ',
-                ping: 'البنج (Latency)', download: 'التنزيل (Download)', upload: 'الرفع (Upload)',
-                go: 'ابدأ', again: 'إعادة', chartTitle: 'الرسم البياني المباشر للنطاق الترددي (Bandwidth Chart)',
-                share: 'مشاركة النتيجة 📋', historyTitle: 'سجل اختبارات السرعة النظير للأنترنت', clear: 'مسح السجل',
-                date: 'التاريخ', copied: 'تم نسخ النتيجة إلى الحافظة!',
-                fetchingIp: '🌐 جاري فحص مسار الشبكة والسيرفرات...',
-                testingDl: '⬇️ جاري قياس أقصى سرعة تنزيل (Gigabit Download)...',
-                testingUl: '⬆️ جاري قياس أقصى سرعة رفع (Gigabit Upload)...',
-                calculatingPing: '⚡ قياس زمن الاستجابة والـ Ping المنخفض...',
-                readyNotice: 'اضغط "ابدأ" لبدء اختبار السرعة الفائق',
-                doneNotice: 'اكتمل اختبار السرعة بنجاح!'
             }
         };
 
@@ -777,7 +923,7 @@
             els.html.setAttribute('dir', t.dir);
             els.html.setAttribute('lang', lang);
             
-            els.langToggle.textContent = lang === 'en' ? 'العربية' : 'English';
+            els.langToggle.textContent = lang === 'ar' ? 'English' : 'عربي';
 
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
@@ -792,7 +938,7 @@
         }
 
         els.langToggle.addEventListener('click', () => {
-            setLanguage(currentLang === 'en' ? 'ar' : 'en');
+            setLanguage(currentLang === 'ar' ? 'en' : 'ar');
         });
 
         function startGaugePhysics() {
@@ -1099,7 +1245,6 @@
 
             targetSpeed = 0;
             await sleep(800); 
-            await sleep(2000); 
 
             els.statusBadge.textContent = translations[currentLang].testingUl;
             activeColorVar = '--neon-ul';
@@ -1112,7 +1257,6 @@
 
             targetSpeed = 0;
             await sleep(800); 
-            await sleep(2000); 
 
             els.statusBadge.textContent = translations[currentLang].calculatingPing;
             activeColorVar = '--neon-ping';
@@ -1139,15 +1283,15 @@
         }
 
         function saveHistory(result) {
-            let history = JSON.parse(localStorage.getItem('herospeed_history') || '[]');
+            let history = JSON.parse(localStorage.getItem('hero_history') || '[]');
             history.unshift(result);
             if (history.length > 5) history.pop();
-            localStorage.setItem('herospeed_history', JSON.stringify(history));
+            localStorage.setItem('hero_history', JSON.stringify(history));
             renderHistory();
         }
 
         function renderHistory() {
-            let history = JSON.parse(localStorage.getItem('herospeed_history') || '[]');
+            let history = JSON.parse(localStorage.getItem('hero_history') || '[]');
             els.historyBody.innerHTML = '';
             history.forEach(item => {
                 const tr = document.createElement('tr');
@@ -1162,13 +1306,13 @@
         }
 
         els.clearHistoryBtn.addEventListener('click', () => {
-            localStorage.removeItem('herospeed_history');
+            localStorage.removeItem('hero_history');
             renderHistory();
         });
         renderHistory();
 
         els.shareBtn.addEventListener('click', () => {
-            const summary = `🚀 HeroSpeed Test Results:\nDownload: ${els.dlVal.textContent} Mbps\nUpload: ${els.ulVal.textContent} Mbps\nPing: ${els.pingVal.textContent} ms\nISP: ${els.isp.textContent}`;
+            const summary = `🚀 Hero Speed Test Results:\nDownload: ${els.dlVal.textContent} Mbps\nUpload: ${els.ulVal.textContent} Mbps\nPing: ${els.pingVal.textContent} ms`;
             navigator.clipboard.writeText(summary);
             alert(translations[currentLang].copied);
         });
