@@ -51,6 +51,7 @@
             display: flex;
             flex-direction: column;
             overflow-x: hidden;
+            padding-bottom: 70px; /* مساحة كافية للبانر السفلي الثابت */
         }
 
         html[dir="rtl"] body { font-family: var(--font-ar); }
@@ -112,6 +113,32 @@
             background: linear-gradient(135deg, #ffffff 0%, var(--neon-dl) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        /* تنسيق حاوية الإعلانات داخل الموقع */
+        .ads-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 1.5rem 0;
+            overflow: hidden;
+        }
+
+        /* بانر أسفل الشاشة الثابت (320x50) */
+        .bottom-ad-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 15, 26, 0.95);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 0;
+            z-index: 9998;
         }
 
         /* تصميم جذاب ومذهل لقسم تحميل التطبيق */
@@ -710,6 +737,20 @@
             </div>
         </section>
 
+        <!-- 🌟 [إعلان 1] كود الإعلان المربع 300×250 داخل المحتوى -->
+        <div class="ads-container">
+            <script>
+              atOptions = {
+                'key' : '867d3213b800c0831984b7f15ac410ea',
+                'format' : 'iframe',
+                'height' : 250,
+                'width' : 300,
+                'params' : {}
+              };
+            </script>
+            <script src="https://www.highrevenueformat.com/867d3213b800c0831984b7f15ac410ea/invoke.js"></script>
+        </div>
+
         <!-- عداد القياس وزر ابدأ في المقدمة -->
         <section class="main-display">
             <div class="gauge-column">
@@ -811,6 +852,20 @@
         </section>
 
     </main>
+
+    <!-- 🌟 [إعلان 2] كود البانر النحيف السفلي 320×50 الثابت -->
+    <div class="bottom-ad-bar">
+        <script>
+          atOptions = {
+            'key' : 'c1924fb72cfab2523da6d4740022b78e',
+            'format' : 'iframe',
+            'height' : 50,
+            'width' : 320,
+            'params' : {}
+          };
+        </script>
+        <script src="https://www.highrevenueformat.com/c1924fb72cfab2523da6d4740022b78e/invoke.js"></script>
+    </div>
 
     <script>
         const translations = {
